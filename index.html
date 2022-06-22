@@ -22,9 +22,11 @@
     var url_string = window.location.href
     var url = new URL(url_string);
     var c = url.searchParams.get("code");
-    const h1 = document.createElement("h1");
-    const textNode = document.createTextNode(c);
-    document.getElementById('h').appendChild(textNode);
+    
+    const tn = document.createElement('a');
+    tn.classList.add('key');
+    tn.textContent = c;
+    document.getElementById('h').appendChild(tn);
   }
   
 
